@@ -21,10 +21,10 @@ function Home() {
     return <div>
         <div className="all-products">
             {
-                products.length ? <p className="loading">Loading...</p> :
+                products.length ?
                 products.map((product) => {
                     return <ProductCard key={product.id} product={product} />
-                })
+                }) : <p className="loading">Loading...</p>
             }
         </div>
     </div>
